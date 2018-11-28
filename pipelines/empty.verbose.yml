@@ -1,5 +1,5 @@
 # more verbose example with more (but not all) pipeline options
-name: verbose $(Rev.r)
+name: verbose $(Rev:r)
 trigger:
   batch: false
   branches:
@@ -9,9 +9,11 @@ trigger:
       - feature/*
     exclude:
       - feature/experimental/*
-    paths:
-      include: /src
-      exclude: /docs
+  paths:
+    include:
+      - /pipelines
+    exclude:
+      - /docs
 
 jobs:
   - job: "job1"
