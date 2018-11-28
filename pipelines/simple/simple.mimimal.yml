@@ -1,5 +1,6 @@
 # minimal template.  uses no job or pipeline explicitely defined.
-name: simple.minimal $(Rev:r)
+name: simple.minimal $(Rev:r) # optional
+
 trigger:
 - master
 
