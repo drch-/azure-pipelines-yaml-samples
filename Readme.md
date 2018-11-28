@@ -10,4 +10,4 @@
 Example pipeline: [step-templates](pipelines/step-templates/pipeline.yml)
 
 # Misc
-* DisplayName can come from variables [example](pipelintes/step-templates/steps/step.task.complete.yml)
+* DisplayName can come from variables [example](pipelines/step-templates/steps/step.task.complete.yml)
