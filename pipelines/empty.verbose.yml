@@ -1,0 +1,33 @@
+# more verbose example with more (but not all) pipeline options
+name: verbose $(Rev.r)
+trigger:
+  batch: false
+  branches:
+    include:
+      - master
+      - develop
+      - feature/*
+    exclude:
+      - feature/experimental/*
+    paths:
+      include: /src
+      exclude: /docs
+
+jobs:
+  - job: "job1"
+    displayName: "Job #1"
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    workspace:
+      clean: all
+    timeoutInMinutes: 30
+    cancelTimeoutInMinutes: 5
+
+    steps:
+    - script: echo verbose one-line
+      displayName: one-line script
+
+    - script: |
+        echo verbose multi-line 1
+        echo verbose multi-line 2
+      displayName: multi-line script
