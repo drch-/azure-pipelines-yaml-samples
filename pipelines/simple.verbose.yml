@@ -11,9 +11,9 @@ trigger:
       - feature/experimental/*
   paths:
     include:
-      - /pipelines
+      - pipelines/
     exclude:
-      - /docs
+      - docs/
 
 jobs:
   - job: "job1"
