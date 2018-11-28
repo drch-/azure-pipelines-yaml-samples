@@ -6,3 +6,4 @@ parameters:
 steps:
 - script: |
       echo "##vso[task.complete result=${{ parameters.result }};] ${{ parameters.message }}"
+  displayName: ${{ parameters.result }} ${{ parameters.message }}
