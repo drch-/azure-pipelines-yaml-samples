@@ -1,0 +1,14 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: echo minimal one line
+  displayName: one-line script
+
+- script: |
+    echo minimal multiline 01
+    echo minimal multiline 01
+  displayName: multi-line script
