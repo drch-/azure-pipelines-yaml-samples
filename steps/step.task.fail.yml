@@ -1,7 +1,9 @@
-# fail task by echoing task.complete command
+# fail task by passing params to generic task command
 parameters:
    reason: 'no reason specified'
 
 steps:
-- script: |
-      echo "##vso[task.complete result=Failed;] ${{ parameters.reason }}"
+- template: step.task.complete.yml
+  parameters:
+     result: Failed
+     message: ${{ parameters.reason }}

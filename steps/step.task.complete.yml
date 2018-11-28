@@ -5,4 +5,4 @@ parameters:
 
 steps:
 - script: |
-      echo "##vso[task.complete result=${{ parameters.result };] ${{ parameters.message }}"
+      echo "##vso[task.complete result=${{ parameters.result }};] ${{ parameters.message }}"
