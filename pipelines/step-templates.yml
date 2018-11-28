@@ -1,0 +1,15 @@
+# calls step templates, which in turn call other step templates
+name: step-templates $(Rev:r) # optional
+
+trigger:
+- master
+- develop
+- feature/*
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- template: ../steps/step.task.fail.yml
+  parameters:
+    reason: failling from template

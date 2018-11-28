@@ -1,0 +1,7 @@
+# fail task by echoing task.complete command
+parameters:
+   reason: 'no reason specified'
+
+steps:
+- script: |
+      echo "##vso[task.complete result=Failed;] ${{ parameters.reason }}"

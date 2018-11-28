@@ -1,0 +1,8 @@
+parameters:
+   message: ''
+   # default to failed.  if this is called without a proper result, we should fail anyways.
+   result: 'Failed' # Succeeded|SucceededWithIssues|Failed|Cancelled|Skipped
+
+steps:
+- script: |
+      echo "##vso[task.complete result=${{ parameters.result };] ${{ parameters.message }}"
