@@ -1,5 +1,5 @@
 # more verbose example with more (but not all) pipeline options
-name: verbose $(Rev:r)
+name: simple.verbose $(Rev:r)
 trigger:
   batch: false
   branches:
