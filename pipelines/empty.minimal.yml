@@ -1,3 +1,4 @@
+# minimal template.  uses no job or pipeline explicitely defined.
 trigger:
 - master
 
