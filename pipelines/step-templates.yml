@@ -11,6 +11,7 @@ pool:
 
 steps:
 - template: ../steps/step.task.complete.yml
+  displayName: does this work?
   parameters:
     result: SucceededWithIssues
     message: next task fails by design so need another task
